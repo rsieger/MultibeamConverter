@@ -4,7 +4,7 @@ echo Multibeam Converter
 
 echo - macdeployqt 
 
-cd ~/Development/aforge/mbconverter
+cd ~/Development/GitHub/MultibeamConverter
 
 rm -R '../../Distribution/MultibeamConverter/MultibeamConverter.app'
 cp -R './MultibeamConverter-build-Desktop_Qt_5_3_2_LLDB-Release/MultibeamConverter.app' '../../Distribution/MultibeamConverter/MultibeamConverter.app'
