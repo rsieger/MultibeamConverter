@@ -7,16 +7,10 @@ echo - macdeployqt
 cd ~/Development/GitHub/MultibeamConverter
 
 rm -R '../../Distribution/MultibeamConverter/MultibeamConverter.app'
-cp -R './MultibeamConverter-build-Desktop_Qt_5_3_2_LLDB-Release/MultibeamConverter.app' '../../Distribution/MultibeamConverter/MultibeamConverter.app'
+cp -R './MultibeamConverter-build-Desktop_Qt_5_4_0_clang_64bit-Release/MultibeamConverter.app' '../../Distribution/MultibeamConverter/MultibeamConverter.app'
 cp './trunk/Resources/Info.plist' '../../Distribution/MultibeamConverter/MultibeamConverter.app/Contents/Info.plist'
 
-/Developer/Qt/5.3/clang_64/bin/macdeployqt '../../Distribution/MultibeamConverter/MultibeamConverter.app'
-
-../patchQtFramework.sh '../../Distribution/MultibeamConverter/MultibeamConverter.app/Contents/Frameworks/QtCore.framework'
-../patchQtFramework.sh '../../Distribution/MultibeamConverter/MultibeamConverter.app/Contents/Frameworks/QtGui.framework'
-../patchQtFramework.sh '../../Distribution/MultibeamConverter/MultibeamConverter.app/Contents/Frameworks/QtNetwork.framework'
-../patchQtFramework.sh '../../Distribution/MultibeamConverter/MultibeamConverter.app/Contents/Frameworks/QtPrintSupport.framework'
-../patchQtFramework.sh '../../Distribution/MultibeamConverter/MultibeamConverter.app/Contents/Frameworks/QtWidgets.framework'
+/Developer/Qt/5.4/clang_64/bin/macdeployqt '../../Distribution/MultibeamConverter/MultibeamConverter.app'
 
 echo - code signing
 
@@ -26,7 +20,6 @@ codesign --force --verify --sign 'Developer ID Application: Alfred-Wegener-Insti
 codesign --force --verify --sign 'Developer ID Application: Alfred-Wegener-Institut fur Polar- und Meeresforschung (AWI)' '../../Distribution/MultibeamConverter/MultibeamConverter.app/Contents/Frameworks/QtPrintSupport.framework'
 codesign --force --verify --sign 'Developer ID Application: Alfred-Wegener-Institut fur Polar- und Meeresforschung (AWI)' '../../Distribution/MultibeamConverter/MultibeamConverter.app/Contents/Frameworks/QtWidgets.framework'
 
-codesign --force --verify --sign 'Developer ID Application: Alfred-Wegener-Institut fur Polar- und Meeresforschung (AWI)' '../../Distribution/MultibeamConverter/MultibeamConverter.app/Contents/PlugIns/accessible/libqtaccessiblewidgets.dylib'
 codesign --force --verify --sign 'Developer ID Application: Alfred-Wegener-Institut fur Polar- und Meeresforschung (AWI)' '../../Distribution/MultibeamConverter/MultibeamConverter.app/Contents/PlugIns/bearer/libqcorewlanbearer.dylib'
 codesign --force --verify --sign 'Developer ID Application: Alfred-Wegener-Institut fur Polar- und Meeresforschung (AWI)' '../../Distribution/MultibeamConverter/MultibeamConverter.app/Contents/PlugIns/bearer/libqgenericbearer.dylib'
 codesign --force --verify --sign 'Developer ID Application: Alfred-Wegener-Institut fur Polar- und Meeresforschung (AWI)' '../../Distribution/MultibeamConverter/MultibeamConverter.app/Contents/PlugIns/imageformats/libqdds.dylib'
@@ -61,7 +54,7 @@ cd ~/Development/Distribution
 
 echo - verify package
 
-codesign -dvv '/Volumes/Multibeam Converter/MultibeamConverter.app'
+codesign -d '/Volumes/Multibeam Converter/MultibeamConverter.app'
 
 echo
 hdiutil detach '/Volumes/Multibeam Converter'
