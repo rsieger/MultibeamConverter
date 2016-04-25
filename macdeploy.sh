@@ -49,7 +49,7 @@ cd '/Volumes/Multibeam Converter'
 rm -rf .fseventsd
 mkdir .fseventsd
 touch .fseventsd/no_log
-cd ~/Development/Distribution
+cd ~/Development/Distribution/MultibeamConverter
 
 echo - verify package
 
@@ -57,3 +57,11 @@ codesign -d '/Volumes/Multibeam Converter/MultibeamConverter.app'
 
 echo
 hdiutil detach '/Volumes/Multibeam Converter'
+
+echo - move application
+
+rm -R /Applications/MultibeamConverter.app
+cp -R MultibeamConverter.app /Applications
+cd ~/Development/Distribution
+
+echo - finished
