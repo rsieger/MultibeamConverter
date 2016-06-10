@@ -2,12 +2,12 @@
 echo
 echo Multibeam Converter
 
-echo - macdeployqt 
+echo - macdeployqt
 
 cd ~/Development/GitHub/MultibeamConverter
 
 rm -R '../../Distribution/MultibeamConverter/MultibeamConverter.app'
-cp -R './build-MultibeamConverter-Desktop_Qt_5_6_0_clang_64bit-Release/MultibeamConverter.app' '../../Distribution/MultibeamConverter/MultibeamConverter.app'
+cp -R './build-MultibeamConverter-Desktop_Qt_5_6_1_clang_64bit-Release/MultibeamConverter.app' '../../Distribution/MultibeamConverter/MultibeamConverter.app'
 cp './trunk/Resources/Info.plist' '../../Distribution/MultibeamConverter/MultibeamConverter.app/Contents/Info.plist'
 
 /Developer/Qt/5.6/clang_64/bin/macdeployqt '../../Distribution/MultibeamConverter/MultibeamConverter.app'
