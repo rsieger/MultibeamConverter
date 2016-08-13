@@ -8,7 +8,7 @@
 // **********************************************************************************************
 // 2008-04-07
 
-int MainWindow::SaveFilelist( const QString &s_FilenameOut, const QStringList sl_FilenameList )
+int MainWindow::SaveFilelist( const QString &s_FilenameOut, const QStringList &sl_FilenameList )
 {
     QDateTime   CreationDateTime;
 
