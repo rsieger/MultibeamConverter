@@ -91,10 +91,10 @@ public:
 
     QString buildOutputStr( const bool LatLong, const QString InputStr, const int i_PosDigits, const int i_DepthDigits );
 
-    int MultibeamConverter( const QString& FilenameIn, const QString& FilenameOut, const int SkipNLines, const int NumOfFiles );
+    int MultibeamConverter( const QString &FilenameIn, const QString &FilenameOut, const int SkipNLines, const int NumOfFiles );
 
-    int MultibeamImportConverter( const QString& FilenameIn, const QString& FilenameOut, const int FileNo, const QString& ExportFilename, const QString& CruiseLabel, const QString& EventLabel,
-                                  const QString& AuthorID, const QString& ReferenceID, const QString& ShipName, const QString& ProjectID, const QString& InstituteID, const QString& MethodID,
+    int MultibeamImportConverter( const QString &FilenameIn, const QString &FilenameOut, const int FileNo, const QString &ExportFilename, const QString &CruiseLabel, const QString &EventLabel,
+                                  const QString &AuthorID, const QString &ReferenceID, const QString &ShipName, const QString &ProjectID, const QString &InstituteID, const QString &MethodID,
                                   const bool LatLong, const int PosDigits, const int DepthDigits, const int NumOfFiles );
 
     void doMultibeamConverter( const int n );
@@ -156,7 +156,7 @@ private:
     void appendItem( QStringList &List, const QString &Item, const QString &SS = "", const QString &RS = "" );
     void compressFile( const QString &FilenameIn );
     void clearFilenameList( int &ActionNumber, QStringList &FilenameList );
-    void clearList( QStringList& List );
+    void clearList( QStringList &List );
     void clearMessage();
     void createActions();
     void createMenus();

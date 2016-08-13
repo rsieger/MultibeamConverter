@@ -8,9 +8,9 @@
 // **********************************************************************************************
 // 2013-05-10
 
-int MainWindow::MultibeamImportConverter( const QString& s_FilenameIn, const QString& s_FilenameOut, const int i_FileNo, const QString& s_ExportFilename,
-                                          const QString& s_CruiseLabel, const QString& s_EventLabel, const QString& s_AuthorID, const QString& s_ReferenceID,
-                                          const QString& s_ShipName, const QString& s_ProjectID, const QString& s_InstituteID, const QString& s_MethodID,
+int MainWindow::MultibeamImportConverter( const QString &s_FilenameIn, const QString &s_FilenameOut, const int i_FileNo, const QString &s_ExportFilename,
+                                          const QString &s_CruiseLabel, const QString &s_EventLabel, const QString &s_AuthorID, const QString &s_ReferenceID,
+                                          const QString &s_ShipName, const QString &s_ProjectID, const QString &s_InstituteID, const QString &s_MethodID,
                                           const bool b_LatLong, const int i_PosDigits, const int i_DepthDigits, const int i_NumOfFiles )
 {
     QString         InputStr        = "";
@@ -204,7 +204,7 @@ QString MainWindow::buildOutputStr(const bool b_LatLong, const QString InputStr,
 // **********************************************************************************************
 // 2011-04-07
 
-int MainWindow::MultibeamConverter( const QString& s_FilenameIn, const QString& s_FilenameOut, const int i_SkipNLines, const int i_NumOfFiles )
+int MainWindow::MultibeamConverter( const QString &s_FilenameIn, const QString &s_FilenameOut, const int i_SkipNLines, const int i_NumOfFiles )
 {
     int             k               = 0;
     int             n               = 0;
