@@ -20,6 +20,7 @@
 #include <QCloseEvent>
 #include <QProcess>
 #include <QTimer>
+#include <QTime>
 #include <QMimeData>
 #include <QDesktopServices>
 #include <QMessageBox>
@@ -27,9 +28,9 @@
 #include <QProgressDialog>
 #include <QStatusBar>
 #include <QSettings>
+#include <QSslError>
 
 #include "Globals.h"
-#include "Webfile.h"
 
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
@@ -140,6 +141,7 @@ private:
     bool containsBinaryFile( const QStringList &FilenameList );
     bool existsFirstFile( const int ActionNumber, const QString &FilenameFormat, const int Extension, QStringList &FilenameList );
     bool isEmptyLine( const QString &String );
+    QString findCurl();
     QString findZip( const int mode = 1 );
     QString findUnzip( int const mode = 1 );
     int NumOfSections( const QString &String );
@@ -152,7 +154,7 @@ private:
     int incProgress( const int NumOfFiles, const int Step );
     int readFile( const QString &FilenameIn, QStringList &Input, const int Codec = -1, const int NumOfFiles = 0, const qint64 Bytes = 0 );
     int removeFile( const QString &Filename );
-    int downloadFile( const QString &Url, const QString &absoluteFilePath );
+    int downloadFile( const QString &Curl, const QString &Url, const QString &Filename );
     unsigned int incProgress( const int NumOfFiles, const unsigned int filesize, const unsigned int length, const QString &InputStr );
     void appendItem( QStringList &List, const QString &Item, const QString &SS = "", const QString &RS = "" );
     void compressFolder( const QString &Program, const QString &Folder );

@@ -18,7 +18,7 @@
     const QString _PROGRAMDOI_          = "doi:10.1594/PANGAEA.758968";
     const QString _PROGRAMREADME_       = "https://wiki.pangaea.de/wiki/MultibeamConverter";
 
-    const QString _VERSION_	            = "2.2";	// Version number, 2015-12-28
+    const QString _VERSION_	            = "2.3";	// Version number, 2016-08-28
     const QChar	  _PSEPARATOR_			= '|';
 
     const int	_NOERROR_				= 0;
