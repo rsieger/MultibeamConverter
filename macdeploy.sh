@@ -7,7 +7,7 @@ echo - macdeployqt
 cd ~/Development/GitHub/MultibeamConverter
 
 rm -R '../../Distribution/MultibeamConverter/MultibeamConverter.app'
-cp -R './build-MultibeamConverter-Desktop_Qt_5_7_0_clang_64bit-Release/MultibeamConverter.app' '../../Distribution/MultibeamConverter/MultibeamConverter.app'
+cp -R './build-MultibeamConverter-Desktop_Qt_5_7_1_clang_64bit-Release/MultibeamConverter.app' '../../Distribution/MultibeamConverter/MultibeamConverter.app'
 cp './trunk/Resources/Info.plist' '../../Distribution/MultibeamConverter/MultibeamConverter.app/Contents/Info.plist'
 
 /Developer/Qt/5.7/clang_64/bin/macdeployqt '../../Distribution/MultibeamConverter/MultibeamConverter.app'
@@ -19,7 +19,6 @@ codesign --force --verify --sign 'Developer ID Application: Alfred-Wegener-Insti
 codesign --force --verify --sign 'Developer ID Application: Alfred-Wegener-Institut fur Polar- und Meeresforschung (AWI)' '../../Distribution/MultibeamConverter/MultibeamConverter.app/Contents/Frameworks/QtNetwork.framework'
 codesign --force --verify --sign 'Developer ID Application: Alfred-Wegener-Institut fur Polar- und Meeresforschung (AWI)' '../../Distribution/MultibeamConverter/MultibeamConverter.app/Contents/Frameworks/QtPrintSupport.framework'
 codesign --force --verify --sign 'Developer ID Application: Alfred-Wegener-Institut fur Polar- und Meeresforschung (AWI)' '../../Distribution/MultibeamConverter/MultibeamConverter.app/Contents/Frameworks/QtWidgets.framework'
-codesign --force --verify --sign 'Developer ID Application: Alfred-Wegener-Institut fur Polar- und Meeresforschung (AWI)' '../../Distribution/MultibeamConverter/MultibeamConverter.app/Contents/Frameworks/QtDBus.framework'
 
 codesign --force --verify --sign 'Developer ID Application: Alfred-Wegener-Institut fur Polar- und Meeresforschung (AWI)' '../../Distribution/MultibeamConverter/MultibeamConverter.app/Contents/PlugIns/bearer/libqcorewlanbearer.dylib'
 codesign --force --verify --sign 'Developer ID Application: Alfred-Wegener-Institut fur Polar- und Meeresforschung (AWI)' '../../Distribution/MultibeamConverter/MultibeamConverter.app/Contents/PlugIns/bearer/libqgenericbearer.dylib'
