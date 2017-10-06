@@ -7,10 +7,10 @@ echo - macdeployqt
 cd ~/Development/GitHub/MultibeamConverter
 
 rm -R '../../Distribution/MultibeamConverter/MultibeamConverter.app'
-cp -R './build-MultibeamConverter-Desktop_Qt_5_9_1_clang_64bit-Release/MultibeamConverter.app' '../../Distribution/MultibeamConverter/MultibeamConverter.app'
+cp -R './build-MultibeamConverter-Desktop_Qt_5_9_2_clang_64bit-Release/MultibeamConverter.app' '../../Distribution/MultibeamConverter/MultibeamConverter.app'
 cp './trunk/Resources/Info.plist' '../../Distribution/MultibeamConverter/MultibeamConverter.app/Contents/Info.plist'
 
-/Developer/Qt/5.9.1/clang_64/bin/macdeployqt '../../Distribution/MultibeamConverter/MultibeamConverter.app'
+/Developer/Qt/5.9.2/clang_64/bin/macdeployqt '../../Distribution/MultibeamConverter/MultibeamConverter.app'
 
 echo - code signing
 
